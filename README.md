@@ -14,13 +14,13 @@ Michael Ochieng' Odera
 
 
 ## Contacts
-In case of any bugs or improvements, contact me through enmail:michogelira@gmail.com or phone:+254733258286
+In case of any bugs or improvements, contact me through email:michogelira@gmail.com or phone:+254733258286
 
 ## Development server
 developed to heroku
 
 ## Code Beat Badge
-
+[![codebeat badge](https://codebeat.co/badges/ad7668d7-1795-42a9-bfbb-8ec0d33fb03c)](https://codebeat.co/projects/github-com-michaelodera-organisationalapi-feature-branch)
 
 
 ## Bugs Encountered
@@ -28,23 +28,19 @@ There were no major bugs to be encountered and the console would prove to be mos
 
 ## Technologies used
 * Java11
-* CSS3
-* HTML5
 * Gradle
 * Spark Framework
-* Heroku
-* Loaders
 * Maven
 * Postgres
-* SQL
+* SQL2O
 
 
 ## Installation
-It is imperative that you install a JavaRuntimeEnvironment IDEA and Gradle dependencies else the system won't funtion as required. Knwoledge 
+It is imperative that you install a JavaRuntimeEnvironment IDEA and Gradle dependencies else the system won't function as required. Knowledge 
 of HTML5 and CSS3 is also mandatory. Knowledge of working with Java is also important.
 
 ## Description
-The project above, allows the user as a ranger to enter the sightings of an animal and the animal is to be determined as either endangered or non-endangered. The various animals entered can be determined as related to the various and particular rangers who entered especially relating to their various IDs..
+The project allows on to enter various end points especially for the users, departments and even nws, to create them through using json and gson withe get or post to view or create certain new information.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
