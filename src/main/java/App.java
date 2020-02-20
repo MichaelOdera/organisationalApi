@@ -12,6 +12,8 @@ import org.sql2o.Sql2o;
 import exceptions.ApiException;
 import spark.Spark;
 
+import java.util.List;
+
 import static spark.Spark.post;
 import static spark.Spark.get;
 import static spark.Spark.staticFileLocation;
@@ -69,6 +71,23 @@ public class App{
             }
             return gson.toJson(departmentToFind);
         });
+
+
+        get("/department/:id/news", "application/json", (req, res) -> {
+            int departmentId = Integer.parseInt(req.params("id"));
+
+            Departments departmentToFind = departmentsDao.findById(departmentId);
+            List<News> allNews;
+
+            if (departmentToFind == null){
+                throw new ApiException(404, String.format("No department with the id: \"%s\" exists", req.params("id")));
+            }
+
+            allNews = newsDao.getNewsByDepartment(departmentId);
+
+            return gson.toJson(allNews);
+        });
+
 
 
         post("/users/new", "application/json", (req, res)->{
