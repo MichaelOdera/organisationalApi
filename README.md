@@ -33,11 +33,11 @@ There were no major bugs to be encountered and the console would prove to be mos
 * Maven
 * Postgres
 * SQL2O
-
+*  json
+* gson
 
 ## Installation
-It is imperative that you install a JavaRuntimeEnvironment IDEA and Gradle dependencies else the system won't function as required. Knowledge 
-of HTML5 and CSS3 is also mandatory. Knowledge of working with Java is also important.
+It is imperative that you install a JavaRuntimeEnvironment IDEA and Gradle dependencies else the system won't function as required.Knowledge of working with Java is also important.
 
 ## Description
 The project allows on to enter various end points especially for the users, departments and even nws, to create them through using json and gson withe get or post to view or create certain new information.
