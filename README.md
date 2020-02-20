@@ -47,9 +47,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 
 
-## Live Link
-This is the live link to my website https://mikes-wildlifetracker.herokuapp.com/
-
 Run `gradle run` for a dev server. Navigate to `http://localhost:4567/`. The app will not automatically change if you make any changes white the app is still live. A rerun of the command will b needed in this case.
 
 ## Code scaffolding
