@@ -1,5 +1,7 @@
 import com.google.gson.Gson;
 import models.Departments;
+import models.News;
+import models.Users;
 import models.dao.Sql2oDepartmentsDao;
 import models.dao.Sql2oNewsDao;
 import models.dao.Sql2oUsersDao;
@@ -11,8 +13,8 @@ import exceptions.ApiException;
 import spark.Spark;
 
 import static spark.Spark.post;
+import static spark.Spark.get;
 import static spark.Spark.staticFileLocation;
-import static spark.route.HttpMethod.get;
 import static spark.route.Routes.*;
 
 public class App{
@@ -34,6 +36,10 @@ public class App{
 
         conn = sql2o.open();
 
+        get("/", "application/json", (req, res) -> {
+            return "{\"message\":\"Welcome to the main page of ORGANISATIONAL API.\"}";
+        });
+
 
         post("/departments/new", "application/json", (req, res)->{
             Departments department = gson.fromJson(req.body(), Departments.class);
@@ -42,7 +48,7 @@ public class App{
             return gson.toJson(department);
         });
 
-        Spark.get("/departments", "application/json", (req, res) -> {
+        get("/departments", "application/json", (req, res) -> {
             System.out.println(departmentsDao.getAll());
 
             if(departmentsDao.getAll().size() > 0){
@@ -51,6 +57,46 @@ public class App{
 
             else {
                 return "{\"message\":\"I'm sorry, but no departments are currently listed in the database.\"}";
+            }
+
+        });
+
+        post("/users/new", "application/json", (req, res)->{
+            Users user = gson.fromJson(req.body(), Users.class);
+            usersDao.add(user);
+            res.status(201);
+            return gson.toJson(user);
+        });
+
+        get("/users", "application/json", (req, res) -> {
+            System.out.println(usersDao.getAllUsers());
+
+            if(usersDao.getAllUsers().size() > 0){
+                return gson.toJson(usersDao.getAllUsers());
+            }
+
+            else{
+                return "{\"message\":\"I'm sorry, but no users are currently listed in the database.\"}";
+            }
+        });
+
+
+        post("/news/new", "application/json", (req, res)->{
+            News news = gson.fromJson(req.body(), News.class);
+            newsDao.add(news);
+            res.status(201);
+            return gson.toJson(news);
+        });
+
+
+        get("/news", "application/json", (req, res) -> {
+            System.out.println(newsDao.getAll());
+
+            if(newsDao.getAll().size() > 0) {
+               return gson.toJson(newsDao.getAll());
+            }
+            else{
+                return "{\"message\":\"I'm sorry, but no news items are currently listed in the database.\"}";
             }
 
         });
