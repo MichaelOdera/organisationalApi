@@ -1,4 +1,5 @@
 import com.google.gson.Gson;
+import models.DB;
 import models.Departments;
 import models.News;
 import models.Users;
@@ -6,7 +7,6 @@ import models.dao.Sql2oDepartmentsDao;
 import models.dao.Sql2oNewsDao;
 import models.dao.Sql2oUsersDao;
 import org.sql2o.Connection;
-import org.sql2o.Sql2o;
 
 
 import exceptions.ApiException;
@@ -15,7 +15,6 @@ import java.util.List;
 
 import static spark.Spark.post;
 import static spark.Spark.get;
-import static spark.Spark.staticFileLocation;
 
 public class App{
     public static void main(String[] args) {
@@ -23,19 +22,16 @@ public class App{
         Sql2oNewsDao newsDao;
         Sql2oUsersDao usersDao;
 
-        Connection conn;
         Gson gson = new Gson();
 
        // staticFileLocation("/public");
 //        String connectionString = "jdbc:h2:~/jadle.db;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
-        String connectionString = "jdbc:postgresql://localhost/test?user=fred&password=secret&ssl=true";;
-        Sql2o sql2o = new Sql2o(connectionString, "", "");
+//        String connectionString = "jdbc:postgresql://localhost/test?user=fred&password=secret&ssl=true";;
+//        Sql2o sql2o = new Sql2o(connectionString, "", "");
 
-        departmentsDao = new Sql2oDepartmentsDao(sql2o);
-        newsDao = new Sql2oNewsDao(sql2o);
+        departmentsDao = new Sql2oDepartmentsDao();
+        newsDao = new Sql2oNewsDao();
         usersDao = new Sql2oUsersDao();
-
-        conn = sql2o.open();
 
         get("/", "application/json", (req, res) -> {
             return "{\"message\":\"Welcome to the main page of ORGANISATIONAL API.\"}";

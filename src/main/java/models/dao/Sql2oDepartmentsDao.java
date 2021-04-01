@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Sql2oDepartmentsDao implements DepartmentsDao {
 
-    public Sql2oDepartmentsDao(Sql2o sql2o) {
+    public Sql2oDepartmentsDao() {
 
     }
 
