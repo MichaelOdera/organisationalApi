@@ -14,15 +14,16 @@ public class Sql2oUsersDao implements UsersDao {
 
     @Override
     public void add(Users user) {
-        String sql = "INSERT INTO users (userName, userCompanyPosition, userCompanyRole, departmentId) VALUES (:userName, :userCompanyPosition, :userCompanyRole, :departmentId)";
+
         try(Connection con = DB.sql2o.open()){
-            int id = (int) con.createQuery(sql, true)
+            String sql = "INSERT INTO users (userName, userCompanyPosition, userCompanyRole, departmentId) VALUES (:userName, :userCompanyPosition, :userCompanyRole, :departmentId)";
+            con.createQuery(sql, true)
                     .bind(user)
-                    .executeUpdate()
-                    .getKey();
-            user.setId(id);
+                    .executeUpdate();
+//                    .getKey();
+//            user.setId(id);
         } catch (Sql2oException ex) {
-            System.out.println(ex);
+            System.out.println(ex + "Could not save data to the database");
         }
 
     }
@@ -49,8 +50,9 @@ public class Sql2oUsersDao implements UsersDao {
 
     @Override
     public void update(int id, String newUserName, String newUserCompanyPosition, String newUserCompanyRole, int departmentId) {
-        String sql = "UPDATE users SET (userName, userCompanyPosition, userCompanyRole, departmentId) = (:userName, :userCompanyPosition, :userCompanyRole, :departmentId) WHERE id=:id"; //CHECK!!!
+        //CHECK!!!
         try (Connection con = DB.sql2o.open()) {
+            String sql = "UPDATE users SET (userName, userCompanyPosition, userCompanyRole, departmentId) = (:userName, :userCompanyPosition, :userCompanyRole, :departmentId) WHERE id=:id";
             con.createQuery(sql)
                     .addParameter("userName", newUserName)
                     .addParameter("userCompanyPosition", newUserCompanyPosition)
@@ -66,8 +68,8 @@ public class Sql2oUsersDao implements UsersDao {
 
     @Override
     public void deleteById(int id) {
-        String sql = "DELETE from users WHERE id = :id"; //raw sql
         try(Connection con = DB.sql2o.open()){
+            String sql = "DELETE from users WHERE id = :id";
             con.createQuery(sql)
                     .addParameter("id", id)
                     .executeUpdate();
@@ -79,8 +81,8 @@ public class Sql2oUsersDao implements UsersDao {
 
     @Override
     public void clearAll() {
-        String sql = "DELETE FROM users";
         try(Connection con = DB.sql2o.open()){
+            String sql = "DELETE FROM users";
             con.createQuery(sql).executeUpdate();
         }catch (Sql2oException ex) {
             System.out.println(ex);
