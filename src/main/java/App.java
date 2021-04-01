@@ -10,14 +10,12 @@ import org.sql2o.Sql2o;
 
 
 import exceptions.ApiException;
-import spark.Spark;
 
 import java.util.List;
 
 import static spark.Spark.post;
 import static spark.Spark.get;
 import static spark.Spark.staticFileLocation;
-import static spark.route.Routes.*;
 
 public class App{
     public static void main(String[] args) {
@@ -29,12 +27,13 @@ public class App{
         Gson gson = new Gson();
 
         staticFileLocation("/public");
-        String connectionString = "jdbc:h2:~/jadle.db;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
+//        String connectionString = "jdbc:h2:~/jadle.db;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
+        String connectionString = "jdbc:postgresql://localhost/test?user=fred&password=secret&ssl=true";;
         Sql2o sql2o = new Sql2o(connectionString, "", "");
 
         departmentsDao = new Sql2oDepartmentsDao(sql2o);
         newsDao = new Sql2oNewsDao(sql2o);
-        usersDao = new Sql2oUsersDao(sql2o);
+        usersDao = new Sql2oUsersDao();
 
         conn = sql2o.open();
 

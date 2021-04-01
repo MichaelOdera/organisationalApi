@@ -1,9 +1,7 @@
 package models.dao;
 
 import models.Users;
-import org.h2.engine.User;
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 import org.sql2o.Connection;
@@ -24,7 +22,7 @@ public class Sql2oUsersDaoTest {
         Sql2o sql2o = new Sql2o(connectionString, "", "");
         departmentsDao = new Sql2oDepartmentsDao(sql2o);
         newsDao = new Sql2oNewsDao(sql2o);
-        usersDao = new Sql2oUsersDao(sql2o);
+        usersDao = new Sql2oUsersDao();
         conn = sql2o.open();
     }
 

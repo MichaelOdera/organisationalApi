@@ -2,8 +2,6 @@ package models.dao;
 
 import models.Departments;
 import models.News;
-import models.Users;
-import org.h2.util.New;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -28,7 +26,7 @@ public class Sql2oNewsDaoTest {
         Sql2o sql2o = new Sql2o(connectionString, "", "");
         departmentsDao = new Sql2oDepartmentsDao(sql2o);
         newsDao = new Sql2oNewsDao(sql2o);
-        usersDao = new Sql2oUsersDao(sql2o);
+        usersDao = new Sql2oUsersDao();
         conn = sql2o.open();
     }
 

@@ -4,6 +4,7 @@ import models.Departments;
 import models.News;
 import models.Users;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface NewsDao {

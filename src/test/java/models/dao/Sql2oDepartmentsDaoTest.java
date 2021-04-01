@@ -26,7 +26,7 @@ public class Sql2oDepartmentsDaoTest {
             Sql2o sql2o = new Sql2o(connectionString, "", "");
             departmentsDao = new Sql2oDepartmentsDao(sql2o);
             newsDao = new Sql2oNewsDao(sql2o);
-            usersDao = new Sql2oUsersDao(sql2o);
+            usersDao = new Sql2oUsersDao();
             conn = sql2o.open();
         }
 

@@ -1,8 +1,8 @@
 package models.dao;
 
+import models.DB;
 import models.Departments;
 import models.News;
-import models.Users;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
@@ -20,7 +20,7 @@ public class Sql2oNewsDao implements NewsDao {
     @Override
     public void add(News news) {
         String sql = "INSERT INTO news(newsTitle, newsContent, departmentId) VALUES (:newsTitle, :newsContent, :departmentId)";
-        try (Connection con = sql2o.open()) {
+        try (Connection con = DB.sql2o.open()) {
             int id = (int) con.createQuery(sql, true)
                     .bind(news)
                     .executeUpdate()
@@ -36,7 +36,7 @@ public class Sql2oNewsDao implements NewsDao {
     @Override
     public void addNewsToDepartment(News news, Departments department) {
         String sql = "INSERT INTO departments_news (departmentId, newsId) VALUES (:departmentId, :newsId)";
-        try (Connection con = sql2o.open()) {
+        try (Connection con = DB.sql2o.open()) {
             con.createQuery(sql)
                     .addParameter("departmentId", department.getId())
                     .addParameter("newsId", news.getId())
@@ -49,7 +49,7 @@ public class Sql2oNewsDao implements NewsDao {
 
     @Override
     public List<News> getAll() {
-        try (Connection con = sql2o.open()) {
+        try (Connection con = DB.sql2o.open()) {
             return con.createQuery("SELECT * FROM news")
                     .executeAndFetch(News.class);
         }
@@ -57,7 +57,7 @@ public class Sql2oNewsDao implements NewsDao {
 
     @Override
     public News findById(int id) {
-        try(Connection con = sql2o.open()){
+        try(Connection con = DB.sql2o.open()){
             return con.createQuery("SELECT * FROM news WHERE id=:id")
                     .addParameter("id", id)
                     .executeAndFetchFirst(News.class);
@@ -66,10 +66,10 @@ public class Sql2oNewsDao implements NewsDao {
 
     @Override
     public List<News> getNewsByDepartment(int departmentId) {
-        List<News> news = new ArrayList(); //empty list
+        List<News> news = new ArrayList<>(); //empty list
         String joinQuery = "SELECT newsId FROM departments_news WHERE departmentId = :departmentId";
 
-        try (Connection con = sql2o.open()) {
+        try (Connection con = DB.sql2o.open()) {
             List<Integer> allNewsIds = con.createQuery(joinQuery)
                     .addParameter("departmentId", departmentId)
                     .executeAndFetch(Integer.class);
@@ -89,7 +89,7 @@ public class Sql2oNewsDao implements NewsDao {
     @Override
     public void update(int id, String newNewsTitle, String newNewsContent, int departmentId) {
         String sql = "UPDATE news SET (newsTitle, newsContent, departmentId) = (:newsTitle, :newsContent, :departmentId) WHERE id=:id"; //CHECK!!!
-        try (Connection con = sql2o.open()) {
+        try (Connection con = DB.sql2o.open()) {
             con.createQuery(sql)
                     .addParameter("newsTitle", newNewsTitle)
                     .addParameter("newsContent", newNewsContent)
@@ -106,7 +106,7 @@ public class Sql2oNewsDao implements NewsDao {
     public void deleteById(int id) {
         String sql = "DELETE from news WHERE id = :id"; //raw sql
         String deleteJoin = "DELETE from departments_news WHERE departmentId = :departmentId";
-        try (Connection con = sql2o.open()) {
+        try (Connection con = DB.sql2o.open()) {
             con.createQuery(sql)
                     .addParameter("id", id)
                     .executeUpdate();
@@ -121,7 +121,7 @@ public class Sql2oNewsDao implements NewsDao {
 
     public void clearAll() {
         String sql = "DELETE FROM news";
-        try(Connection con = sql2o.open()){
+        try(Connection con = DB.sql2o.open()){
             con.createQuery(sql).executeUpdate();
         }catch (Sql2oException ex) {
             System.out.println(ex);
