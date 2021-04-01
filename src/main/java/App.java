@@ -26,7 +26,7 @@ public class App{
         Connection conn;
         Gson gson = new Gson();
 
-        staticFileLocation("/public");
+       // staticFileLocation("/public");
 //        String connectionString = "jdbc:h2:~/jadle.db;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
         String connectionString = "jdbc:postgresql://localhost/test?user=fred&password=secret&ssl=true";;
         Sql2o sql2o = new Sql2o(connectionString, "", "");
