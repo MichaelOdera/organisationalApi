@@ -68,7 +68,7 @@ public class App{
         });
 
 
-        get("/department/:id/news", "application/json", (req, res) -> {
+        get("/departments/:id/news", "application/json", (req, res) -> {
             int departmentId = Integer.parseInt(req.params("id"));
 
             Departments departmentToFind = departmentsDao.findById(departmentId);
@@ -79,6 +79,10 @@ public class App{
             }
 
             allNews = newsDao.getNewsByDepartment(departmentId);
+
+            if(allNews == null){
+                return gson.toJson("Could not find the required news items");
+            }
 
             return gson.toJson(allNews);
         });
