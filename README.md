@@ -49,7 +49,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 The following are the api routes for the above application: -
 
     | Method | model       |    End Points       |
-    |:-------|:-----------:|--------------------:|
+    |------- |-----------  |-------------------- |
     |post    | user        |   /users/new        |
     |post    | department  |/departments/new     |
     |post    | news        |   /news/new         |
@@ -61,7 +61,40 @@ The following are the api routes for the above application: -
     |get     | news        | /news               |
     |get     | news        |/departments/:id/news|
     
-    
+## JSON Samples
+### User
+ ```
+   {
+    "userName" : "user254",
+    "userPosition": "Secretary",
+    "userRole":"Taking Notes",
+    "departmentId": 3
+    "id":5
+    }
+```
+
+### Department
+```
+    {
+      "departmentName": "Managerial",
+      "departmentDescription":"Management and company activity oversite",
+      "employeesNumber": 15,
+      "departmentId": 2
+    }
+```
+
+### News
+
+```
+   {
+     "newsTitle": "Sanitation",
+     "newsContent":"Cleaning will be done on Mondays as from 7:30pm - 9:30pm",
+     "departmentId": 3,
+     "id":2
+   }
+
+```
+
     
 
 
