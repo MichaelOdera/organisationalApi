@@ -63,7 +63,7 @@ The following are the api routes for the above application: -
     
 ## JSON Samples
 ### User
- ```
+ ```json5
    {
     "userName" : "user254",
     "userPosition": "Secretary",
@@ -74,7 +74,7 @@ The following are the api routes for the above application: -
 ```
 
 ### Department
-```
+```json5
     {
       "departmentName": "Managerial",
       "departmentDescription":"Management and company activity oversite",
@@ -85,7 +85,7 @@ The following are the api routes for the above application: -
 
 ### News
 
-```
+```json5
    {
      "newsTitle": "Sanitation",
      "newsContent":"Cleaning will be done on Mondays as from 7:30pm - 9:30pm",
