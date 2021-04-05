@@ -1,6 +1,5 @@
 package models;
 
-import org.h2.engine.User;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -11,7 +10,7 @@ public class UsersTest {
     @Test
     public void instantiatesCorrectly_true(){
         Users userTest = new Users("Gregory", "Secretary", "Reporting", 12);
-        assertTrue(userTest instanceof Users);
+        assertTrue(true);
     }
 
     @Test
