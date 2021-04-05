@@ -23,5 +23,8 @@ dependencies {
     compile group: 'com.h2database', name: 'h2', version: '1.4.191'
     compile group: 'org.postgresql', name: 'postgresql', version: '42.2.9' // ADD ME FOR POSTGRES VERSION 9.x
 }
-task stage(dependsOn: ['clean', 'installDist'])
-applicationName = "organisationalapi"
+//task stage(dependsOn: ['clean', 'installDist'])
+//applicationName = "organisationalapi"
+
+defaultTasks = ['clean']
+task stage(dependsOn: ['clean', 'installApp'])
