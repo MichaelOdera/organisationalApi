@@ -20,11 +20,7 @@
             <artifactId>spark-template-handlebars</artifactId>
             <version>2.5.5</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.velocity</groupId>
-            <artifactId>velocity</artifactId>
-            <version>1.7</version>
-        </dependency>
+
         <dependency>
             <groupId>org.sql2o</groupId>
             <artifactId>sql2o</artifactId>
@@ -41,11 +37,7 @@
             <artifactId>heroku-maven-plugin</artifactId>
             <version>2.0.3</version>
         </dependency>
-        <dependency>
-            <groupId>org.sql2o</groupId>
-            <artifactId>sql2o</artifactId>
-            <version>1.5.4</version>
-        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -82,6 +74,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
+
                 <executions>
                     <execution>
                         <phase>package</phase>
