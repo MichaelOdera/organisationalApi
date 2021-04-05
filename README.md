@@ -68,7 +68,7 @@ The following are the api routes for the above application: -
     "userName" : "user254",
     "userPosition": "Secretary",
     "userRole":"Taking Notes",
-    "departmentId": 3
+    "departmentId": 3,
     "id":5
     }
 ```
