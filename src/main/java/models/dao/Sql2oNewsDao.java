@@ -83,20 +83,18 @@ public class Sql2oNewsDao implements NewsDao {
         return news;
     }
 
-    @Override
-    public void update(int id, String newNewsTitle, String newNewsContent, int departmentId) {
+    public News update(int id, News news) {
         String sql = "UPDATE news SET (newsTitle, newsContent, departmentId) = (:newsTitle, :newsContent, :departmentId) WHERE id=:id"; //CHECK!!!
         try (Connection con = DB.sql2o.open()) {
             con.createQuery(sql)
-                    .addParameter("newsTitle", newNewsTitle)
-                    .addParameter("newsContent", newNewsContent)
-                    .addParameter("departmentId", departmentId)
+                    .bind(news)
                     .addParameter("id", id)
                     .executeUpdate();
         } catch (Sql2oException ex) {
             System.out.println(ex);
         }
 
+        return news;
     }
 
     @Override

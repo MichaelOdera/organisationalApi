@@ -9,8 +9,7 @@ import models.dao.Sql2oUsersDao;
 
 import java.util.List;
 
-import static spark.Spark.get;
-import static spark.Spark.post;
+import static spark.Spark.*;
 
 public class App{
     public static void main(String[] args) {
@@ -144,6 +143,17 @@ public class App{
                 throw new ApiException(404, String.format("No news item with the id: \"%s\" exists", req.params("id")));
             }
             return gson.toJson(newsToFind);
+        });
+
+        put("news/:id", "application/json", (req, res) -> {
+            News news = gson.fromJson(req.body(), News.class);
+            int newsId = Integer.parseInt(req.params("id"));
+            News UpdatedNews = newsDao.update(newsId, news);
+            if (UpdatedNews == null){
+                throw new ApiException(404, String.format("No news item with the id: \"%s\" exists", req.params("id")));
+            }
+
+            return gson.toJson(UpdatedNews);
         });
 
 

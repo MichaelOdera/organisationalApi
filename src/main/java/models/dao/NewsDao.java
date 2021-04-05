@@ -19,7 +19,7 @@ public interface NewsDao {
     List<News> getNewsByDepartment(int departmentId);
 
     //update
-    void update(int id, String newsTitle, String newsContent,int departmentId);
+    News update(int id, News news);
 
     //delete
     void deleteById(int id);

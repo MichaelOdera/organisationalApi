@@ -10,7 +10,7 @@ import org.sql2o.Sql2o;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class Sql2oNewsDaoTest {
 
@@ -49,7 +49,7 @@ public class Sql2oNewsDaoTest {
     @Test
     public void news_instantiatesCorrectly_true(){
         News testNews = setUpNews();
-        assertEquals(true, testNews instanceof News);
+        assertNotNull(testNews);
     }
 
     @Test
@@ -75,7 +75,8 @@ public class Sql2oNewsDaoTest {
     @Test
     public void update_UpdatesCorrectlyUpdatesAllFieldCorrectly_true(){
         News testAltNews = setUpAltNews();
-        newsDao.update(testAltNews.getId(), "mango", "farming is fine", 12);
+        News updatedInfoNews = new News("mango", "farming is fine", 12);
+        newsDao.update(testAltNews.getId(), updatedInfoNews);
         News foundNews = newsDao.findById(testAltNews.getId());
         assertEquals("mango", foundNews.getNewsTitle());
         assertEquals("farming is fine", foundNews.getNewsContent());
