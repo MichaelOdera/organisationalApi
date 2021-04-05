@@ -40,14 +40,33 @@ There were no major bugs to be encountered and the console would prove to be mos
 It is imperative that you install a JavaRuntimeEnvironment IDEA and Gradle dependencies else the system won't function as required.Knowledge of working with Java is also important.
 
 ## Description
-The project allows on to enter various end points especially for the users, departments and even nws, to create them through using json and gson withe get or post to view or create certain new information.
+The project allows one to enter data through various end points belonging to users, departments and event news, using json formats and implementing gson to convert the json objects to POJOs, and the POJOs fetched back to json objects with a get or post to view or send certain information to the database.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+## API Routes
+The following are the api routes for the above application: -
+
+    | Method | model       |    End Points       |
+    |:-------|:-----------:|--------------------:|
+    |post    | user        |   /users/new        |
+    |post    | department  |/departments/new     |
+    |post    | news        |   /news/new         |
+    |get     | user        |  /user/:id          |
+    |get     | user        | /users              |
+    |get     | department  | /departments        |
+    |get     | department  | /department/:id     |
+    |get     | news        | /news/:id           |
+    |get     | news        | /news               |
+    |get     | news        |/departments/:id/news|
+    
+    
+    
 
 
-Run `gradle run` for a dev server. Navigate to `http://localhost:4567/`. The app will not automatically change if you make any changes white the app is still live. A rerun of the command will b needed in this case.
+
+Run `gradle run` for a dev server. Navigate to `http://localhost:4567/`. The app will not automatically change if you make any changes white the app is still live. A rerun of the command will be needed in this case.
 
 ## Code scaffolding
 
