@@ -12,7 +12,15 @@ import java.util.List;
 import static spark.Spark.*;
 
 public class App{
+    static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
+    }
     public static void main(String[] args) {
+        port(getHerokuAssignedPort());
         Sql2oDepartmentsDao departmentsDao;
         Sql2oNewsDao newsDao;
         Sql2oUsersDao usersDao;
@@ -23,6 +31,8 @@ public class App{
 //        String connectionString = "jdbc:h2:~/jadle.db;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
 //        String connectionString = "jdbc:postgresql://localhost/test?user=fred&password=secret&ssl=true";;
 //        Sql2o sql2o = new Sql2o(connectionString, "", "");
+
+
 
         departmentsDao = new Sql2oDepartmentsDao();
         newsDao = new Sql2oNewsDao();
