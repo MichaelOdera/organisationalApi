@@ -1,1 +1,1 @@
-web: ./build/install/wildlifetracker/bin/organisationalapi
+web: ./build/install/organisationalapi/bin/organisationalapi
