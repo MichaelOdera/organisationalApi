@@ -1,84 +1,84 @@
 -------------------------------------------------------------------------------
 Test set: models.dao.Sql2oUsersDaoTest
 -------------------------------------------------------------------------------
-Tests run: 16, Failures: 0, Errors: 16, Skipped: 0, Time elapsed: 71.87 sec <<< FAILURE! - in models.dao.Sql2oUsersDaoTest
-instantiatesCorrectly(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.382 sec  <<< ERROR!
+Tests run: 16, Failures: 0, Errors: 16, Skipped: 0, Time elapsed: 68.488 sec <<< FAILURE! - in models.dao.Sql2oUsersDaoTest
+instantiatesCorrectly(models.dao.Sql2oUsersDaoTest)  Time elapsed: 9.297 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oUsersDaoTest.setUp(Sql2oUsersDaoTest.java:26)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oUsersDaoTest.setUp(Sql2oUsersDaoTest.java:26)
 
-instantiatesCorrectly(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.382 sec  <<< ERROR!
+instantiatesCorrectly(models.dao.Sql2oUsersDaoTest)  Time elapsed: 9.297 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oUsersDaoTest.tearDown(Sql2oUsersDaoTest.java:35)
 
-clearAll_clearsAllInstancesFromTheDatabaseCorrectly_true(models.dao.Sql2oUsersDaoTest)  Time elapsed: 9.932 sec  <<< ERROR!
+clearAll_clearsAllInstancesFromTheDatabaseCorrectly_true(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.675 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oUsersDaoTest.setUp(Sql2oUsersDaoTest.java:26)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oUsersDaoTest.setUp(Sql2oUsersDaoTest.java:26)
 
-clearAll_clearsAllInstancesFromTheDatabaseCorrectly_true(models.dao.Sql2oUsersDaoTest)  Time elapsed: 9.932 sec  <<< ERROR!
+clearAll_clearsAllInstancesFromTheDatabaseCorrectly_true(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.675 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oUsersDaoTest.tearDown(Sql2oUsersDaoTest.java:35)
 
-findByIdReturnsCorrectInstanceOfClass(models.dao.Sql2oUsersDaoTest)  Time elapsed: 9.02 sec  <<< ERROR!
+findByIdReturnsCorrectInstanceOfClass(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.045 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oUsersDaoTest.setUp(Sql2oUsersDaoTest.java:26)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oUsersDaoTest.setUp(Sql2oUsersDaoTest.java:26)
 
-findByIdReturnsCorrectInstanceOfClass(models.dao.Sql2oUsersDaoTest)  Time elapsed: 9.02 sec  <<< ERROR!
+findByIdReturnsCorrectInstanceOfClass(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.045 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oUsersDaoTest.tearDown(Sql2oUsersDaoTest.java:35)
 
-updatesCorrectlyUpdatesAllFieldsCorrectly(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.593 sec  <<< ERROR!
+updatesCorrectlyUpdatesAllFieldsCorrectly(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.52 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oUsersDaoTest.setUp(Sql2oUsersDaoTest.java:26)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oUsersDaoTest.setUp(Sql2oUsersDaoTest.java:26)
 
-updatesCorrectlyUpdatesAllFieldsCorrectly(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.593 sec  <<< ERROR!
+updatesCorrectlyUpdatesAllFieldsCorrectly(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.52 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oUsersDaoTest.tearDown(Sql2oUsersDaoTest.java:35)
 
-deletesUserByIdCorrectly(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.703 sec  <<< ERROR!
+deletesUserByIdCorrectly(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.549 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oUsersDaoTest.setUp(Sql2oUsersDaoTest.java:26)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oUsersDaoTest.setUp(Sql2oUsersDaoTest.java:26)
 
-deletesUserByIdCorrectly(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.704 sec  <<< ERROR!
+deletesUserByIdCorrectly(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.549 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oUsersDaoTest.tearDown(Sql2oUsersDaoTest.java:35)
 
-returnsCorrectSizeAfterInstantiation(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.71 sec  <<< ERROR!
+returnsCorrectSizeAfterInstantiation(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.782 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oUsersDaoTest.setUp(Sql2oUsersDaoTest.java:26)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oUsersDaoTest.setUp(Sql2oUsersDaoTest.java:26)
 
-returnsCorrectSizeAfterInstantiation(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.711 sec  <<< ERROR!
+returnsCorrectSizeAfterInstantiation(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.782 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oUsersDaoTest.tearDown(Sql2oUsersDaoTest.java:35)
 
-returnsTheRightId(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.508 sec  <<< ERROR!
+returnsTheRightId(models.dao.Sql2oUsersDaoTest)  Time elapsed: 7.879 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oUsersDaoTest.setUp(Sql2oUsersDaoTest.java:26)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oUsersDaoTest.setUp(Sql2oUsersDaoTest.java:26)
 
-returnsTheRightId(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.508 sec  <<< ERROR!
+returnsTheRightId(models.dao.Sql2oUsersDaoTest)  Time elapsed: 7.88 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oUsersDaoTest.tearDown(Sql2oUsersDaoTest.java:35)
 
-returnNothingWhenThereIsNoInstance(models.dao.Sql2oUsersDaoTest)  Time elapsed: 10.018 sec  <<< ERROR!
+returnNothingWhenThereIsNoInstance(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.738 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oUsersDaoTest.setUp(Sql2oUsersDaoTest.java:26)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oUsersDaoTest.setUp(Sql2oUsersDaoTest.java:26)
 
-returnNothingWhenThereIsNoInstance(models.dao.Sql2oUsersDaoTest)  Time elapsed: 10.018 sec  <<< ERROR!
+returnNothingWhenThereIsNoInstance(models.dao.Sql2oUsersDaoTest)  Time elapsed: 8.739 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oUsersDaoTest.tearDown(Sql2oUsersDaoTest.java:35)
 
