@@ -1,104 +1,104 @@
 -------------------------------------------------------------------------------
 Test set: models.dao.Sql2oNewsDaoTest
 -------------------------------------------------------------------------------
-Tests run: 20, Failures: 0, Errors: 20, Skipped: 0, Time elapsed: 89.91 sec <<< FAILURE! - in models.dao.Sql2oNewsDaoTest
-addsNewsToADepartmentCorrectly(models.dao.Sql2oNewsDaoTest)  Time elapsed: 9.579 sec  <<< ERROR!
+Tests run: 20, Failures: 0, Errors: 20, Skipped: 0, Time elapsed: 90.703 sec <<< FAILURE! - in models.dao.Sql2oNewsDaoTest
+addsNewsToADepartmentCorrectly(models.dao.Sql2oNewsDaoTest)  Time elapsed: 10.416 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 
-addsNewsToADepartmentCorrectly(models.dao.Sql2oNewsDaoTest)  Time elapsed: 9.579 sec  <<< ERROR!
+addsNewsToADepartmentCorrectly(models.dao.Sql2oNewsDaoTest)  Time elapsed: 10.416 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oNewsDaoTest.tearDown(Sql2oNewsDaoTest.java:39)
 
-news_instantiatesCorrectly_true(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.461 sec  <<< ERROR!
+news_instantiatesCorrectly_true(models.dao.Sql2oNewsDaoTest)  Time elapsed: 9.004 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 
-news_instantiatesCorrectly_true(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.461 sec  <<< ERROR!
+news_instantiatesCorrectly_true(models.dao.Sql2oNewsDaoTest)  Time elapsed: 9.005 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oNewsDaoTest.tearDown(Sql2oNewsDaoTest.java:39)
 
-returnsTheIdOfNewsInstanceCorrectly(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.903 sec  <<< ERROR!
+returnsTheIdOfNewsInstanceCorrectly(models.dao.Sql2oNewsDaoTest)  Time elapsed: 9.321 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 
-returnsTheIdOfNewsInstanceCorrectly(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.904 sec  <<< ERROR!
+returnsTheIdOfNewsInstanceCorrectly(models.dao.Sql2oNewsDaoTest)  Time elapsed: 9.321 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oNewsDaoTest.tearDown(Sql2oNewsDaoTest.java:39)
 
-returnsZeroIfNoInstanceOfNewsExists(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.646 sec  <<< ERROR!
+returnsZeroIfNoInstanceOfNewsExists(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.399 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 
-returnsZeroIfNoInstanceOfNewsExists(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.647 sec  <<< ERROR!
+returnsZeroIfNoInstanceOfNewsExists(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.399 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oNewsDaoTest.tearDown(Sql2oNewsDaoTest.java:39)
 
-clearsAllNewsAfterClearAllMethodIsCalled(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.85 sec  <<< ERROR!
+clearsAllNewsAfterClearAllMethodIsCalled(models.dao.Sql2oNewsDaoTest)  Time elapsed: 10.138 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 
-clearsAllNewsAfterClearAllMethodIsCalled(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.851 sec  <<< ERROR!
+clearsAllNewsAfterClearAllMethodIsCalled(models.dao.Sql2oNewsDaoTest)  Time elapsed: 10.139 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oNewsDaoTest.tearDown(Sql2oNewsDaoTest.java:39)
 
-deletesTheRightNewsByIdCorrectly(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.709 sec  <<< ERROR!
+deletesTheRightNewsByIdCorrectly(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.623 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 
-deletesTheRightNewsByIdCorrectly(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.709 sec  <<< ERROR!
+deletesTheRightNewsByIdCorrectly(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.623 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oNewsDaoTest.tearDown(Sql2oNewsDaoTest.java:39)
 
-update_UpdatesCorrectlyUpdatesAllFieldCorrectly_true(models.dao.Sql2oNewsDaoTest)  Time elapsed: 9.328 sec  <<< ERROR!
+update_UpdatesCorrectlyUpdatesAllFieldCorrectly_true(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.564 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 
-update_UpdatesCorrectlyUpdatesAllFieldCorrectly_true(models.dao.Sql2oNewsDaoTest)  Time elapsed: 9.328 sec  <<< ERROR!
+update_UpdatesCorrectlyUpdatesAllFieldCorrectly_true(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.567 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oNewsDaoTest.tearDown(Sql2oNewsDaoTest.java:39)
 
-returnsTheCorrectTotalInstancesOfTheClass(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.8 sec  <<< ERROR!
+returnsTheCorrectTotalInstancesOfTheClass(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.813 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 
-returnsTheCorrectTotalInstancesOfTheClass(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.8 sec  <<< ERROR!
+returnsTheCorrectTotalInstancesOfTheClass(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.814 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oNewsDaoTest.tearDown(Sql2oNewsDaoTest.java:39)
 
-deletingADepartmentAlsoUpdatesTheNewDepartmentJointTable(models.dao.Sql2oNewsDaoTest)  Time elapsed: 9.63 sec  <<< ERROR!
+deletingADepartmentAlsoUpdatesTheNewDepartmentJointTable(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.907 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 
-deletingADepartmentAlsoUpdatesTheNewDepartmentJointTable(models.dao.Sql2oNewsDaoTest)  Time elapsed: 9.63 sec  <<< ERROR!
+deletingADepartmentAlsoUpdatesTheNewDepartmentJointTable(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.909 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oNewsDaoTest.tearDown(Sql2oNewsDaoTest.java:39)
 
-findByIdReturnsCorrectNewsInstance(models.dao.Sql2oNewsDaoTest)  Time elapsed: 9 sec  <<< ERROR!
+findByIdReturnsCorrectNewsInstance(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.503 sec  <<< ERROR!
 org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oNewsDaoTest.setUp(Sql2oNewsDaoTest.java:30)
 
-findByIdReturnsCorrectNewsInstance(models.dao.Sql2oNewsDaoTest)  Time elapsed: 9 sec  <<< ERROR!
+findByIdReturnsCorrectNewsInstance(models.dao.Sql2oNewsDaoTest)  Time elapsed: 8.503 sec  <<< ERROR!
 java.lang.NullPointerException
 	at models.dao.Sql2oNewsDaoTest.tearDown(Sql2oNewsDaoTest.java:39)
 
