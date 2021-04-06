@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp build/classes:build/libs/* src/main/java/App
+web: ./build/install/wildlifetracker/bin/organisationalapi
