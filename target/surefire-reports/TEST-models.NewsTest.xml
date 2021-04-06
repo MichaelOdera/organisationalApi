@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="models.NewsTest" time="0.046" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="models.NewsTest" time="0.133" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="2020.3.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -63,11 +63,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="setDepartmentId_setNewsDepartmentIdCorrectly_14" classname="models.NewsTest" time="0.006"/>
+  <testcase name="setDepartmentId_setNewsDepartmentIdCorrectly_14" classname="models.NewsTest" time="0.005"/>
   <testcase name="setNewsContent_setNewsContentCorrectly_He_is_coming" classname="models.NewsTest" time="0"/>
   <testcase name="instantiatesNewsCorrectly_true" classname="models.NewsTest" time="0"/>
   <testcase name="getNewsContent_returnNewsContentCorrectly_The_Finance_department_is_fine" classname="models.NewsTest" time="0"/>
   <testcase name="getNewsTitle_returnsCorrectNewsTitle_Finance" classname="models.NewsTest" time="0"/>
   <testcase name="getDepartmentId_returnsTheDepartmentIdCorrectly_12" classname="models.NewsTest" time="0"/>
-  <testcase name="setNewsTitle_setsNewsTitleCorrectly_Now" classname="models.NewsTest" time="0.001"/>
+  <testcase name="setNewsTitle_setsNewsTitleCorrectly_Now" classname="models.NewsTest" time="0"/>
 </testsuite>

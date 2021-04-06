@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="models.dao.Sql2oDepartmentsDaoTest" time="76.467" tests="18" errors="18" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="models.dao.Sql2oDepartmentsDaoTest" time="81.809" tests="18" errors="18" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="2020.3.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -17,6 +17,7 @@
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/home/michael/IdeaProjects/organisationalApi"/>
+    <property name="intellij.debug.agent" value="true"/>
     <property name="java.runtime.version" value="1.8.0_282-8u282-b08-0ubuntu1~20.04-b08"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed"/>
@@ -29,6 +30,7 @@
     <property name="classworlds.conf" value="/home/michael/idea/plugins/maven/lib/maven3/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="jboss.modules.system.pkgs" value="com.intellij.rt"/>
     <property name="maven.conf" value="/home/michael/idea/plugins/maven/lib/maven3/conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
@@ -40,7 +42,7 @@
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="user.name" value="michael"/>
-    <property name="java.class.path" value="/home/michael/idea/plugins/maven/lib/maven3/boot/plexus-classworlds-2.6.0.jar:/home/michael/idea/plugins/maven/lib/maven3/boot/plexus-classworlds.license:/home/michael/idea/lib/idea_rt.jar"/>
+    <property name="java.class.path" value="/home/michael/idea/plugins/maven/lib/maven3/boot/plexus-classworlds-2.6.0.jar:/home/michael/idea/plugins/maven/lib/maven3/boot/plexus-classworlds.license:/home/michael/idea/lib/idea_rt.jar:/home/michael/idea/plugins/Groovy/lib/agent/gragent.jar:/home/michael/idea/plugins/java/lib/rt/debugger-agent.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/usr/lib/jvm/java-8-openjdk-amd64/jre"/>
@@ -61,7 +63,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="getsTotalSizeCorrectly_true" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.577">
+  <testcase name="getsTotalSizeCorrectly_true" classname="models.dao.Sql2oDepartmentsDaoTest" time="9.43">
     <error message="Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from &apos;classpath:db/create.sql&apos;" type="org.sql2o.Sql2oException">org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oDepartmentsDaoTest.setUp(Sql2oDepartmentsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
@@ -70,12 +72,12 @@ Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testi
     <system-out><![CDATA[clearing database
 ]]></system-out>
   </testcase>
-  <testcase name="getsTotalSizeCorrectly_true" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.577">
+  <testcase name="getsTotalSizeCorrectly_true" classname="models.dao.Sql2oDepartmentsDaoTest" time="9.43">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at models.dao.Sql2oDepartmentsDaoTest.tearDown(Sql2oDepartmentsDaoTest.java:39)
 </error>
   </testcase>
-  <testcase name="findByIdReturnsCorrectDepartment" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.485">
+  <testcase name="findByIdReturnsCorrectDepartment" classname="models.dao.Sql2oDepartmentsDaoTest" time="10.045">
     <error message="Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from &apos;classpath:db/create.sql&apos;" type="org.sql2o.Sql2oException">org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oDepartmentsDaoTest.setUp(Sql2oDepartmentsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
@@ -84,12 +86,12 @@ Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testi
     <system-out><![CDATA[clearing database
 ]]></system-out>
   </testcase>
-  <testcase name="findByIdReturnsCorrectDepartment" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.485">
+  <testcase name="findByIdReturnsCorrectDepartment" classname="models.dao.Sql2oDepartmentsDaoTest" time="10.045">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at models.dao.Sql2oDepartmentsDaoTest.tearDown(Sql2oDepartmentsDaoTest.java:39)
 </error>
   </testcase>
-  <testcase name="update_UpdatesCorrectlyUpdatesAllFieldsCorrectly_true" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.819">
+  <testcase name="update_UpdatesCorrectlyUpdatesAllFieldsCorrectly_true" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.632">
     <error message="Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from &apos;classpath:db/create.sql&apos;" type="org.sql2o.Sql2oException">org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oDepartmentsDaoTest.setUp(Sql2oDepartmentsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
@@ -98,12 +100,12 @@ Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testi
     <system-out><![CDATA[clearing database
 ]]></system-out>
   </testcase>
-  <testcase name="update_UpdatesCorrectlyUpdatesAllFieldsCorrectly_true" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.819">
+  <testcase name="update_UpdatesCorrectlyUpdatesAllFieldsCorrectly_true" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.632">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at models.dao.Sql2oDepartmentsDaoTest.tearDown(Sql2oDepartmentsDaoTest.java:39)
 </error>
   </testcase>
-  <testcase name="savesOneInstanceCorrectlyAndGetsRightId_true" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.496">
+  <testcase name="savesOneInstanceCorrectlyAndGetsRightId_true" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.434">
     <error message="Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from &apos;classpath:db/create.sql&apos;" type="org.sql2o.Sql2oException">org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oDepartmentsDaoTest.setUp(Sql2oDepartmentsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
@@ -112,12 +114,12 @@ Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testi
     <system-out><![CDATA[clearing database
 ]]></system-out>
   </testcase>
-  <testcase name="savesOneInstanceCorrectlyAndGetsRightId_true" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.497">
+  <testcase name="savesOneInstanceCorrectlyAndGetsRightId_true" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.435">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at models.dao.Sql2oDepartmentsDaoTest.tearDown(Sql2oDepartmentsDaoTest.java:39)
 </error>
   </testcase>
-  <testcase name="addsBothUserIdAndDepartmentIdToDB_Correctly" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.069">
+  <testcase name="addsBothUserIdAndDepartmentIdToDB_Correctly" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.714">
     <error message="Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from &apos;classpath:db/create.sql&apos;" type="org.sql2o.Sql2oException">org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oDepartmentsDaoTest.setUp(Sql2oDepartmentsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
@@ -126,12 +128,12 @@ Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testi
     <system-out><![CDATA[clearing database
 ]]></system-out>
   </testcase>
-  <testcase name="addsBothUserIdAndDepartmentIdToDB_Correctly" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.07">
+  <testcase name="addsBothUserIdAndDepartmentIdToDB_Correctly" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.714">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at models.dao.Sql2oDepartmentsDaoTest.tearDown(Sql2oDepartmentsDaoTest.java:39)
 </error>
   </testcase>
-  <testcase name="returnsZeroIfNoInstanceOfDepartmentExists_0" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.756">
+  <testcase name="returnsZeroIfNoInstanceOfDepartmentExists_0" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.507">
     <error message="Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from &apos;classpath:db/create.sql&apos;" type="org.sql2o.Sql2oException">org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oDepartmentsDaoTest.setUp(Sql2oDepartmentsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
@@ -140,12 +142,12 @@ Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testi
     <system-out><![CDATA[clearing database
 ]]></system-out>
   </testcase>
-  <testcase name="returnsZeroIfNoInstanceOfDepartmentExists_0" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.757">
+  <testcase name="returnsZeroIfNoInstanceOfDepartmentExists_0" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.508">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at models.dao.Sql2oDepartmentsDaoTest.tearDown(Sql2oDepartmentsDaoTest.java:39)
 </error>
   </testcase>
-  <testcase name="clearAll_deletesAllTheDataPresentInTheDepartmentsTable_true" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.141">
+  <testcase name="clearAll_deletesAllTheDataPresentInTheDepartmentsTable_true" classname="models.dao.Sql2oDepartmentsDaoTest" time="10.361">
     <error message="Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from &apos;classpath:db/create.sql&apos;" type="org.sql2o.Sql2oException">org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oDepartmentsDaoTest.setUp(Sql2oDepartmentsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
@@ -154,12 +156,12 @@ Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testi
     <system-out><![CDATA[clearing database
 ]]></system-out>
   </testcase>
-  <testcase name="clearAll_deletesAllTheDataPresentInTheDepartmentsTable_true" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.141">
+  <testcase name="clearAll_deletesAllTheDataPresentInTheDepartmentsTable_true" classname="models.dao.Sql2oDepartmentsDaoTest" time="10.361">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at models.dao.Sql2oDepartmentsDaoTest.tearDown(Sql2oDepartmentsDaoTest.java:39)
 </error>
   </testcase>
-  <testcase name="deleteDepartmentByIdDeletesCorrectDepartment" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.649">
+  <testcase name="deleteDepartmentByIdDeletesCorrectDepartment" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.749">
     <error message="Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from &apos;classpath:db/create.sql&apos;" type="org.sql2o.Sql2oException">org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oDepartmentsDaoTest.setUp(Sql2oDepartmentsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
@@ -168,12 +170,12 @@ Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testi
     <system-out><![CDATA[clearing database
 ]]></system-out>
   </testcase>
-  <testcase name="deleteDepartmentByIdDeletesCorrectDepartment" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.65">
+  <testcase name="deleteDepartmentByIdDeletesCorrectDepartment" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.749">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at models.dao.Sql2oDepartmentsDaoTest.tearDown(Sql2oDepartmentsDaoTest.java:39)
 </error>
   </testcase>
-  <testcase name="deletingADepartmentAlsoUpdatesTheJointTable" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.469">
+  <testcase name="deletingADepartmentAlsoUpdatesTheJointTable" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.933">
     <error message="Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from &apos;classpath:db/create.sql&apos;" type="org.sql2o.Sql2oException">org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
 	at models.dao.Sql2oDepartmentsDaoTest.setUp(Sql2oDepartmentsDaoTest.java:30)
 Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'
@@ -182,7 +184,7 @@ Caused by: java.sql.SQLException: No suitable driver found for jdbc:h2:mem:testi
     <system-out><![CDATA[clearing database
 ]]></system-out>
   </testcase>
-  <testcase name="deletingADepartmentAlsoUpdatesTheJointTable" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.469">
+  <testcase name="deletingADepartmentAlsoUpdatesTheJointTable" classname="models.dao.Sql2oDepartmentsDaoTest" time="8.934">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at models.dao.Sql2oDepartmentsDaoTest.tearDown(Sql2oDepartmentsDaoTest.java:39)
 </error>

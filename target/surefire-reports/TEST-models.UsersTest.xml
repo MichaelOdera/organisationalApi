@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="models.UsersTest" time="0" tests="9" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="models.UsersTest" time="0.001" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="2020.3.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -71,5 +71,5 @@
   <testcase name="setDepartmentId_setsUpUserCompanyDepartmentIdCorrectly_14" classname="models.UsersTest" time="0"/>
   <testcase name="getUserName_returnsUserNameCorrectly_Gregory" classname="models.UsersTest" time="0"/>
   <testcase name="getUserCompanyRole_returnsCorrectlyUserRole_Reporting" classname="models.UsersTest" time="0"/>
-  <testcase name="getUserCompanyPosition_returnsCorrectlyUserPosition_Secretary" classname="models.UsersTest" time="0"/>
+  <testcase name="getUserCompanyPosition_returnsCorrectlyUserPosition_Secretary" classname="models.UsersTest" time="0.001"/>
 </testsuite>
