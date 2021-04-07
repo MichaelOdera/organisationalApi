@@ -77,15 +77,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.1.1</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <version>3.3.0</version>
                 <configuration>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
@@ -97,24 +89,29 @@
                         </manifest>
                     </archive>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.heroku.sdk</groupId>
-                <artifactId>heroku-maven-plugin</artifactId>
-                <version>2.0.3</version>
-                <configuration>
-                    <jdkVersion>1.8</jdkVersion>
-                    <!-- Change this to YOUR application name! -->
-                    <appName>organisationalapi</appName>
-                    <processTypes>
-                        <web>java -jar target/my-app-1.0-jar-with-dependencies.jar</web>
-                    </processTypes>
-                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id> <!-- this is used for inheritance merges -->
+                        <phase>package</phase> <!-- bind to the packaging phase -->
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
             </plugin>
             <plugin>
                 <groupId>com.heroku.sdk</groupId>
                 <artifactId>heroku-maven-plugin</artifactId>
                 <version>3.0.3</version>
+                <configuration>
+                    <jdkVersion>1.8</jdkVersion>
+                    <!-- Change this to YOUR application name! -->
+                    <appName>organizationalapi</appName>
+                    <processTypes>
+                        <web>java -jar target/my-app-1.0-jar-with-dependencies.jar</web>
+                    </processTypes>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
