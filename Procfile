@@ -1,1 +1,1 @@
-web build/install/organisationalapi/bin/organisationalapi
+web web: java $JAVA_OPTS -cp target/classes/* App
