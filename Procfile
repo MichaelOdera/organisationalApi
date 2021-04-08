@@ -1,1 +1,1 @@
-web: build/install/organisationalpi/bin/organisationalpai
+web: -cp build/install/organisationalpi/bin/organisationalapi
