@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp build/install/organisationalapi/bin/organisationalapi
+web: build/install/organisationalapi/bin/organisationalapi
