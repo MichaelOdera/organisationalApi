@@ -1,1 +1,1 @@
-web: ./target/classes/App
+web: java -jar -cp ./target/classes/* App
