@@ -1,1 +1,0 @@
-web: java -jar target/organisationalapi-1.0.jar
