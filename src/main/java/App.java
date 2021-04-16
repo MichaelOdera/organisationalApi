@@ -72,6 +72,16 @@ public class App{
             return gson.toJson(departmentToFind);
         });
 
+        get("/departments/:id/users", "application/json", (req, res) -> {
+            int departmentId = Integer.parseInt(req.params("id"));
+            List<Users> usersByDepartment = departmentsDao.getAllUsersByDepartment(departmentId);
+            if(usersByDepartment.isEmpty()){
+                throw new ApiException(404, String.format("No users for the department with id : \"%s\" were found", req.params("id")));
+            }
+
+            return gson.toJson(usersByDepartment);
+        });
+
 
         get("/departments/:id/news", "application/json", (req, res) -> {
             int departmentId = Integer.parseInt(req.params("id"));
@@ -90,6 +100,21 @@ public class App{
             }
 
             return gson.toJson(allNews);
+        });
+
+        delete("/departments/:id", "application/json", (req, res) -> {
+            int newsId = Integer.parseInt(req.params("id"));
+
+            Departments confirmedDepartmentToDelete = departmentsDao.findById(newsId);
+            if(confirmedDepartmentToDelete == null){
+                throw new ApiException(404, String.format("No department with the id: \"%s\" exists", req.params("id")));
+            }
+            departmentsDao.deleteById(newsId);
+            Departments deletedDepartment = departmentsDao.findById(newsId);
+            if(deletedDepartment != null){
+                throw new ApiException(500, String.format("Could not delete department with id: \"%s\" ", req.params("id")));
+            }
+            return "The Department was deleted successfully";
         });
 
 
@@ -121,6 +146,21 @@ public class App{
                 throw new ApiException(404, String.format("No user with the id: \"%s\" exists", req.params("id")));
             }
             return gson.toJson(userToFind);
+        });
+
+        delete("/users/:id", "application/json", (req, res) -> {
+            int userId = Integer.parseInt(req.params("id"));
+            Users userToDelete = usersDao.findUserById(userId);
+            if(userToDelete == null){
+                throw new ApiException(404, String.format("No user with id: \"%s\" exists", req.params("id")));
+            }
+            usersDao.deleteById(userId);
+            Users userStillPresent = usersDao.findUserById(userId);
+            if(userStillPresent != null){
+                throw new ApiException(500, String.format("Could not delete user with id : \"%s\" from the database", req.params("id")));
+            }
+
+            return String.format("The user with id: \"%s\" was deleted successfully.", req.params("id"));
         });
 
 
@@ -164,6 +204,30 @@ public class App{
             }
 
             return gson.toJson(UpdatedNews);
+        });
+
+        delete("/news/:id", "application/json", (req, res) -> {
+            int newsId = Integer.parseInt(req.params("id"));
+
+            News confirmedNewsItemToDelete = newsDao.findById(newsId);
+            if(confirmedNewsItemToDelete == null){
+                throw new ApiException(404, String.format("No news item with the id: \"%s\" exists", req.params("id")));
+            }
+            newsDao.deleteById(newsId);
+            News deletedNewsItem = newsDao.findById(newsId);
+            if(deletedNewsItem != null){
+                throw new ApiException(500, String.format("Could not delete news item with id: \"%s\" ", req.params("id")));
+            }
+            return "News item was deleted successfully";
+        });
+
+        delete("/news/delete/all", "application/json", (req, res) -> {
+            newsDao.clearAll();
+            List<News> allNews = newsDao.getAll();
+            if(!allNews.isEmpty()){
+                return "Could not delete all news items";
+            }
+            return "all news items were deleted successfully";
         });
 
 

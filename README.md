@@ -48,18 +48,24 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## API Routes
 The following are the api routes for the above application: -
 
-    | Method | model       |    End Points       |
-    |------- |-----------  |-------------------- |
-    |post    | user        |   /users/new        |
-    |post    | department  |/departments/new     |
-    |post    | news        |   /news/new         |
-    |get     | user        |  /user/:id          |
-    |get     | user        | /users              |
-    |get     | department  | /departments        |
-    |get     | department  | /department/:id     |
-    |get     | news        | /news/:id           |
-    |get     | news        | /news               |
-    |get     | news        |/departments/:id/news|
+    | Method | model       |    End Points         |
+    |------- |-----------  |---------------------- |
+    |post    | user        |   /users/new          |
+    |post    | department  |/departments/new       |
+    |post    | news        |   /news/new           |
+    |get     | user        |  /user/:id            |
+    |get     | user        | /users                |
+    |delete  | user        | /users/:id            |
+    |get     | department  | /departments          |
+    |get     | department  | /department/:id       |
+    |delete  | department  |/department/:id        |
+    |get     | user        |/departments/:id/users |
+    |get     | news        | /news/:id             |
+    |put     | news        | /news/:id             |
+    |delete  | news        | /news/:id             |
+    |delete  | news        | /news/delete/all      |
+    |get     | news        | /news                 |
+    |get     | news        |/departments/:id/news  |
     
 ## JSON Samples
 ### User
