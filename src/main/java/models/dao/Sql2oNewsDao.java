@@ -6,7 +6,6 @@ import models.News;
 import org.sql2o.Connection;
 import org.sql2o.Sql2oException;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Sql2oNewsDao implements NewsDao {
@@ -25,7 +24,7 @@ public class Sql2oNewsDao implements NewsDao {
             news.setId(id);
 
         } catch (Sql2oException ex) {
-            System.out.println(ex);
+            throw new Sql2oException(ex);
         }
 
     }
@@ -39,7 +38,7 @@ public class Sql2oNewsDao implements NewsDao {
                     .addParameter("newsId", news.getId())
                     .executeUpdate();
         } catch (Sql2oException ex){
-            System.out.println(ex);
+            throw new Sql2oException(ex);
         }
 
     }
@@ -63,7 +62,7 @@ public class Sql2oNewsDao implements NewsDao {
 
     @Override
     public List<News> getNewsByDepartment(int departmentId) {
-        List<News> news = new ArrayList<>(); //empty list
+        List<News> news; //empty list
         String joinQuery = "SELECT * FROM news WHERE departmentId = :departmentId";
 
         try (Connection con = DB.sql2o.open()) {
@@ -71,7 +70,7 @@ public class Sql2oNewsDao implements NewsDao {
                     .addParameter("departmentId", departmentId)
                     .executeAndFetch(News.class);
         } catch (Sql2oException ex){
-            System.out.println(ex);
+            throw new Sql2oException(ex);
         }
         return news;
     }
@@ -84,7 +83,7 @@ public class Sql2oNewsDao implements NewsDao {
                     .addParameter("id", id)
                     .executeUpdate();
         } catch (Sql2oException ex) {
-            System.out.println(ex);
+            throw new Sql2oException(ex);
         }
 
         return news;
@@ -102,7 +101,7 @@ public class Sql2oNewsDao implements NewsDao {
                     .addParameter("departmentId", id)
                     .executeUpdate();
         } catch (Sql2oException ex){
-            System.out.println(ex);
+            throw new Sql2oException(ex);
         }
 
     }
@@ -112,7 +111,7 @@ public class Sql2oNewsDao implements NewsDao {
         try(Connection con = DB.sql2o.open()){
             con.createQuery(sql).executeUpdate();
         }catch (Sql2oException ex) {
-            System.out.println(ex);
+            throw new Sql2oException(ex);
         }
 
     }
