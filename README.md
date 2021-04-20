@@ -72,8 +72,8 @@ The following are the api routes for the above application: -
  ```json5
    {
     "userName" : "user254",
-    "userPosition": "Secretary",
-    "userRole":"Taking Notes",
+    "userCompanyPosition": "Secretary",
+    "userCompanyRole":"Taking Notes",
     "departmentId": 3,
     "id":5
     }
